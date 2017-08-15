@@ -1,0 +1,611 @@
+/* Background*/
+/* Text */
+body {
+  font: 0.8em 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  background-color: #efefef;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-main {
+  width: 100%;
+  max-width: 1500px;
+  padding: 5px;
+}
+
+#container-content {
+  width: 95%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.31em;
+  color: #595959;
+}
+
+h2 {
+  font-size: 0.875em;
+}
+
+.quote {
+  font-size: 0.75em;
+  color: #777;
+  overflow: hidden;
+}
+
+.author {
+  font-size: 0.68em;
+  color: #aaa;
+}
+
+.grid .titles {
+  display: none;
+}
+
+.content {
+  background-color: #fff;
+}
+
+.content h2 {
+  font-weight: bold;
+}
+
+.cover {
+  background-color: #e6f7ff;
+}
+
+.likes {
+  color: #595959;
+  font-size: 0.75em;
+}
+
+.menu {
+  position: relative;
+  padding: 15px 0;
+}
+
+.toggle {
+  position: absolute;
+  right: 5px;
+  top: 30px;
+}
+
+.content, .cover, .likes {
+  position: absolute;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+/* grid view */
+.grid {
+  /* toggle icon */
+  /* single book */
+}
+.grid .menu .material-icons:last-child {
+  display: none;
+}
+.grid .menu {
+  margin: 0 auto;
+  width: 250px;
+}
+.grid #book-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.grid .book-single {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  margin-bottom: 25px;
+  border: 1px solid lightgray;
+}
+.grid .content {
+  left: 20%;
+  height: 220px;
+  padding: 10px;
+  padding-top: 0;
+}
+.grid .cover {
+  top: 0;
+  width: 20%;
+  height: 220px;
+  text-align: center;
+  padding-top: 10px;
+  overflow: hidden;
+}
+.grid .likes {
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  background-color: #b3e6ff;
+}
+.grid .likes:hover {
+  color: #fff;
+  background-color: #00aaff;
+}
+.grid .titles {
+  display: none;
+}
+
+/* end of grid */
+/* for grid and view */
+.likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.likes i:first-child {
+  width: 10%;
+  padding-left: 10px;
+  margin-right: 5px;
+}
+
+.likes span {
+  width: 70%;
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+/* dropdown button with icon */
+.dropdown-button {
+  width: 20%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.likes i:last-child {
+  width: 100%;
+  height: 100%;
+  margin-right: 0;
+  padding-left: 0;
+  padding-top: 6px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* dropdown-menu  */
+.likes ul {
+  position: absolute;
+  width: 100%;
+  top: 35px;
+  bottom: 0;
+  z-index: 1;
+  display: none;
+}
+.likes ul li a, .likes ul span {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #595959;
+  color: #ddd;
+  text-align: right;
+  font-size: 13px;
+}
+.likes ul li:nth-child(4) a {
+  padding-bottom: 0;
+}
+.likes ul li:last-child a {
+  font-size: 9px;
+  padding-top: 0;
+}
+.likes ul li a:hover {
+  background-color: #797979;
+}
+
+/******* list view *******/
+.list .menu .material-icons:first-child {
+  display: none;
+}
+.list .book-single {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  border: 1px solid lightgray;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: none;
+  background-color: #e6f7ff;
+}
+.list .book-single:last-child {
+  border-bottom: 1px solid lightgray;
+}
+.list .content, .list .content h2, .list .quote, .list .author, .list .cover, .list .likes {
+  position: relative;
+  height: 100%;
+}
+.list .content {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+.list .content h2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+}
+.list .quote {
+  width: 50%;
+  display: none;
+  padding: 8px 2px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  height: 80%;
+}
+.list .author {
+  width: 20%;
+  padding-left: 5px;
+  padding-right: 10px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+}
+.list .cover {
+  width: 5%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+.list .likes {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.list .likes i:first-child {
+  display: none;
+}
+.list .likes span {
+  display: none;
+}
+.list .likes i:last-child {
+  width: 100%;
+  height: 100%;
+  margin-right: 0;
+  padding-left: 0;
+  padding-top: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.list .dropdown-button {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  text-align: center;
+}
+.list .likes ul {
+  width: 300%;
+  top: 48px;
+  right: 0;
+}
+.list .titles {
+  width: 100%;
+  height: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+.list .titles .content-titles {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  color: #777;
+}
+.list .titles .content-titles span:first-child {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10px;
+}
+.list .titles .content-titles span:nth-child(2) {
+  width: 50%;
+  display: none;
+  padding-left: 2px;
+}
+.list .titles .content-titles span:nth-child(3) {
+  width: 20%;
+  padding-left: 5px;
+  padding-right: 10px;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+}
+.list .titles .cover-titles {
+  width: 5%;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #777;
+}
+.list .titles .likes-titles {
+  width: 20%;
+  color: #777;
+}
+.list .titles .likes-titles span {
+  padding-left: 2px;
+}
+
+@media screen and (min-width: 400px) {
+  .list .likes {
+    width: 25%;
+    background-color: #fff;
+  }
+  .list .likes i:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .list .likes span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .list .dropdown-button {
+    width: 30%;
+  }
+  .list .likes i:last-child {
+    width: 100%;
+    height: 100%;
+    margin-right: 0;
+    padding-left: 0;
+    padding-top: 12px;
+    padding-right: 5px;
+  }
+  .list .content {
+    width: 65%;
+  }
+  .list .cover {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 10%;
+  }
+  .list .likes ul {
+    width: 120%;
+  }
+  .list .titles .content-titles {
+    width: 65%;
+  }
+  .list .titles .cover-titles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 10%;
+  }
+  .list .titles .likes-titles {
+    width: 25%;
+  }
+  .list .titles .likes-titles span {
+    padding-left: 10px;
+  }
+}
+/* one book */
+@media screen and (min-width: 500px) {
+  .grid .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .grid .book-single {
+    margin: 15px;
+  }
+  .grid .book-single:first-child {
+    margin-top: 0;
+  }
+
+  .list .likes ul {
+    width: 70%;
+  }
+  .list .content {
+    width: 70%;
+  }
+  .list .content h2 {
+    width: 60%;
+  }
+  .list .content .author {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .list .cover {
+    width: 10%;
+  }
+  .list .likes {
+    width: 20%;
+  }
+  .list .titles .content-titles {
+    width: 70%;
+  }
+  .list .titles .cover-titles {
+    width: 10%;
+  }
+  .list .titles .likes-titles {
+    width: 20%;
+  }
+  .list .titles .content-titles span:first-child {
+    width: 60%;
+  }
+  .list .titles .content-titles span:nth-child(3) {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/* two books */
+@media screen and (min-width: 617px) {
+  .grid .menu {
+    width: 530px;
+  }
+
+  .list .cover {
+    width: 5%;
+  }
+  .list .content {
+    width: 75%;
+  }
+  .list .content h2 {
+    width: 30%;
+  }
+  .list .content .author {
+    width: 30%;
+  }
+  .list .content .quote {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 40%;
+    padding-left: 10px;
+  }
+  .list .titles .content-titles {
+    width: 75%;
+  }
+  .list .titles .cover-titles {
+    width: 5%;
+  }
+  .list .titles .content-titles span:first-child {
+    width: 30%;
+  }
+  .list .titles .content-titles span:nth-child(2) {
+    width: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 10px;
+  }
+  .list .titles .content-titles span:nth-child(3) {
+    width: 30%;
+  }
+}
+/* three books */
+@media screen and (min-width: 912px) {
+  .grid .menu {
+    width: 810px;
+  }
+
+  .list .content .author {
+    width: 20%;
+  }
+  .list .content .quote {
+    width: 50%;
+  }
+  .list .titles .content-titles {
+    width: 75%;
+  }
+  .list .titles .cover-titles {
+    width: 5%;
+  }
+  .list .titles .likes-titles {
+    width: 20%;
+  }
+  .list .titles .content-titles span:nth-child(2) {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .list .titles .content-titles span:nth-child(3) {
+    width: 20%;
+  }
+}
+/* four books */
+@media screen and (min-width: 1206px) {
+  .grid .menu {
+    width: 1090px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

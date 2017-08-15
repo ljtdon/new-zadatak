@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Books</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">	
+	<link href="css/style.css" rel="stylesheet">
+	<!--[if lt IE 9]>  
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<![endif]--> 
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		rel="stylesheet">
+	</head>
+	<body>
+		<div class="container-main">
+			<div id="container-content" class="grid">	
+						<!-- staviti klasu grid -->
+
+				<div class="menu">					
+					<h1>Books</h1>
+					<div class="toggle" onclick="toggle()">				
+						<i class="material-icons md-24">view_list</i>	
+						<i class="material-icons md-24">apps</i>			
+					</div><!-- /toggle -->					
+				</div><!-- /menu -->	
+
+				
+				<div id="book-container" >	
+
+					<!-- titles  -->
+					<div class="titles">
+						<div class="content-titles">
+							<span>Title</span>
+							<span >Quote</span>								
+							<span>Author</span>	
+						</div><!-- /content -->
+
+						<div class="cover-titles">
+							<span>Cover</span>
+						</div><!-- /cover -->
+
+						<div class="likes-titles">					
+							<span>Likes</span>					
+						</div><!-- /likes -->
+					</div><!-- /titles -->
+
+
+					
+					<!-- first book -->
+					<div class="book-single">
+						<div class="content">
+							<h2>The Wizard of Oz</h2>
+							<article class="quote">Dorothy found herself riding easily between two of the biggest Monkeys, one of them the King himself. They had made a chair of their hands and were careful not to hurt her. "Why do you have to obey the charm of the Golden Cap?"</article>
+							<p class="author">L. Frank Baum</p>	
+						</div><!-- /content -->
+
+						<div class="cover">
+							<img src="images/cover.jpg" alt="cover" width="37" height="56">
+						</div><!-- /cover -->
+
+						<div class="likes">					
+							<i class="material-icons md-18">star_rate</i>		
+							<span class="count">21</span>
+
+							<div class="dropdown-button">
+								<i class="material-icons md-24 icon" onclick="dropdownMenu()">more_horiz</i>	
+							</div><!-- /dropdown-button -->	
+
+							<ul class="dropdown-menu">
+								<li><a href="#">Edit book details</a></li>
+								<li><a href="#">Duplicate book</a></li>
+								<li><a href="#">Move book</a></li>
+								<li><a href="#">Delete book</a></li>
+								<li><a href="#">Delete this book permanently</a></li>						
+
+							</ul><!-- /dropdown-menu -->				
+						</div><!-- /likes -->
+					</div><!-- /book-single -->
+
+					
+
+					<!-- next book -->
+					
+					<div class="book-single">		
+						<div class="content">
+							<h2>Moby Dick</h2>
+							<article class="quote">Round the World! There is much in that sound to inspire proud feelings; but whereto does all that circumnavigation conduct? Only through numberless perils to the very point whence we started, where those that we left behind secure, were all the time before us.</article>
+							<p class="author">Herman Melville</p>	
+						</div><!-- /content -->
+
+						<div class="cover">
+							<img src="images/cover.jpg" alt="cover" width="37" height="56">
+						</div><!-- /cover -->
+
+						<div class="likes">					
+							<i class="material-icons md-18">star_rate</i>		
+							<span class="count">21</span>
+
+							<div class="dropdown-button">
+								<i class="material-icons md-24 icon" onclick="dropdownMenu()">more_horiz</i>	
+							</div><!-- /dropdown-button -->							
+
+							<ul class="dropdown-menu">
+								<li><a href="#">Edit book details</a></li>
+								<li><a href="#">Duplicate book</a></li>
+								<li><a href="#">Move book</a></li>
+								<li><a href="#">Delete book</a></li>
+								<li><a href="#">Delete this book permanently</a></li>						
+
+							</ul><!-- /dropdown-menu -->				
+						</div><!-- /likes -->
+					</div><!-- /book-single -->
+					
+					
+
+					<!-- next book -->
+
+					<div class="book-single">			
+						<div class="content">
+							<h2>The War of the Worlds</h2>
+							<article class="quote">What news from the common?” said I.People seem fair silly about the common,” said the woman over the gate.</article>
+							<p class="author">H.G. Wells</p>	
+						</div><!-- /content -->
+
+						<div class="cover">
+							<img src="images/cover.jpg" alt="cover" width="37" height="56">
+						</div><!-- /cover -->
+
+						<div class="likes">					
+							<i class="material-icons md-18">star_rate</i>		
+							<span class="count">21</span>
+
+							<div class="dropdown-button">
+								<i class="material-icons md-24 icon" onclick="dropdownMenu()">more_horiz</i>	
+							</div><!-- /dropdown-button -->							
+
+							<ul class="dropdown-menu">
+								<li><a href="#">Edit book details</a></li>
+								<li><a href="#">Duplicate book</a></li>
+								<li><a href="#">Move book</a></li>
+								<li><a href="#">Delete book</a></li>
+								<li><a href="#">Delete this book permanently</a></li>								
+
+							</ul><!-- /dropdown-menu -->					
+						</div><!-- /likes -->
+					</div><!-- /book-single -->
+
+
+					<!-- next book -->
+
+					<div class="book-single">		
+						<div class="content">
+							<h2>At the Earth's Core</h2>
+							<article class="quote">I wondered why these agile creatures required connecting bridges between the trees, but later when I saw the motley aggregation of half-savage beasts which they kept within their village I realized the necessity for the pathways.</article>
+							<p class="author">Edgar Rice Burroughs</p>	
+						</div><!-- /content -->
+
+						<div class="cover">
+							<img src="images/cover.jpg" alt="cover" width="37" height="56">
+						</div><!-- /cover -->
+
+						<div class="likes">					
+							<i class="material-icons md-18">star_rate</i>		
+							<span class="count">21</span>
+
+							<div class="dropdown-button">
+								<i class="material-icons md-24 icon" onclick="dropdownMenu()">more_horiz</i>	
+							</div><!-- /dropdown-button -->							
+
+							<ul class="dropdown-menu">
+								<li><a href="#">Edit book details</a></li>
+								<li><a href="#">Duplicate book</a></li>
+								<li><a href="#">Move book</a></li>
+								<li><a href="#">Delete book</a></li>
+								<li><a href="#">Delete this book permanently</a></li>								
+
+							</ul><!-- /dropdown-menu -->					
+						</div><!-- /likes -->
+					</div><!-- /book-single -->
+
+
+					<!-- next book -->
+
+					<div class="book-single">		
+						<div class="content">
+							<h2>A Princess of Mars</h2>
+							<article class="quote">I drew rein on a little level promontory overlooking the trail below and to my left, and saw the party of pursuing savages disappearing around the point of a neighboring peak.</article>
+							<p class="author">Edgar Rice Burroughs</p>	
+						</div><!-- /content -->
+
+						<div class="cover">
+							<img src="images/cover.jpg" alt="cover" width="37" height="56">
+						</div><!-- /cover -->
+
+						<div class="likes">					
+							<i class="material-icons md-18">star_rate</i>		
+							<span class="count">21</span>
+
+							<div class="dropdown-button">
+								<i class="material-icons md-24 icon" onclick="dropdownMenu()">more_horiz</i>	
+							</div><!-- /dropdown-button -->							
+
+							<ul class="dropdown-menu">
+								<li><a href="#">Edit book details</a></li>
+								<li><a href="#">Duplicate book</a></li>
+								<li><a href="#">Move book</a></li>
+								<li><a href="#">Delete book</a></li>
+								<li><a href="#">Delete this book permanently</a></li>								
+
+							</ul><!-- /dropdown-menu -->					
+						</div><!-- /likes -->
+					</div><!-- /book-single -->
+
+
+					<!-- next book -->
+
+					<div class="book-single">		
+						<div class="content">
+							<h2>Alice in Wonderland</h2>
+							<article class="quote">The Hatter shook his head mournfully. 'Not I!' he replied. 'We quarrelled last March — just before he went mad, you know — '</article>
+							<p class="author">Lewis Carroll</p>	
+						</div><!-- /content -->
+
+						<div class="cover">
+							<img src="images/cover.jpg" alt="cover" width="37" height="56">
+						</div><!-- /cover -->
+
+						<div class="likes">					
+							<i class="material-icons md-18">star_rate</i>		
+							<span class="count">21</span>
+
+							<div class="dropdown-button">
+								<i class="material-icons md-24 icon" onclick="dropdownMenu()">more_horiz</i>	
+							</div><!-- /dropdown-button -->							
+
+							<ul class="dropdown-menu">
+								<li><a href="#">Edit book details</a></li>
+								<li><a href="#">Duplicate book</a></li>
+								<li><a href="#">Move book</a></li>
+								<li><a href="#">Delete book</a></li>
+								<li><a href="#">Delete this book permanently</a></li>								
+
+							</ul><!-- /dropdown-menu -->					
+						</div><!-- /likes -->
+					</div><!-- /book-single -->
+
+
+					<!-- next book -->
+
+					<div class="book-single">		
+						<div class="content">
+							<h2>The Scarlet Plague</h2>
+							<article class="quote">It was at this point that Hare-Lip rose to his feet, an expression of huge contempt on his face. “Granser,” he announced, “you make me sick with your gabble.</article>
+							<p class="author">Jack London</p>	
+						</div><!-- /content -->
+
+						<div class="cover">
+							<img src="images/cover.jpg" alt="cover" width="37" height="56">
+						</div><!-- /cover -->
+
+						<div class="likes">					
+							<i class="material-icons md-18">star_rate</i>		
+							<span class="count">21</span>
+
+							<div class="dropdown-button">
+								<i class="material-icons md-24 icon" onclick="dropdownMenu()">more_horiz</i>	
+							</div><!-- /dropdown-button -->							
+
+							<ul class="dropdown-menu">
+								<li><a href="#">Edit book details</a></li>
+								<li><a href="#">Duplicate book</a></li>
+								<li><a href="#">Move book</a></li>
+								<li><a href="#">Delete book</a></li>
+								<li><a href="#">Delete this book permanently</a></li>								
+
+							</ul><!-- /dropdown-menu -->					
+						</div><!-- /likes -->
+					</div><!-- /book-single -->
+
+
+					<!-- next book -->
+
+					<div class="book-single">		
+						<div class="content">
+							<h2>Around the World in 80 Days</h2>
+							<article class="quote">Nothing could be more simple. Indeed, it was all so simple that Fix and Passepartout felt their hearts beating as if they would crack. They were listening for the whistle agreed upon, when suddenly savage cries resounded in the air, accompanied by reports which certainly did not issue from the car where the duellists were.</article>
+							<p class="author">Jules Verne</p>	
+						</div><!-- /content -->
+
+						<div class="cover">
+							<img src="images/cover.jpg" alt="cover" width="37" height="56">
+						</div><!-- /cover -->
+
+						<div class="likes">					
+							<i class="material-icons md-18">star_rate</i>		
+							<span class="count">21</span>
+
+							<div class="dropdown-button">
+								<i class="material-icons md-24 icon" onclick="dropdownMenu()">more_horiz</i>	
+							</div><!-- /dropdown-button -->							
+
+							<ul class="dropdown-menu">
+								<li><a href="#">Edit book details</a></li>
+								<li><a href="#">Duplicate book</a></li>
+								<li><a href="#">Move book</a></li>
+								<li><a href="#">Delete book</a></li>
+								<li><a href="#">Delete this book permanently</a></li>								
+
+							</ul><!-- /dropdown-menu -->					
+						</div><!-- /likes -->
+					</div><!-- /book-single -->
+				</div><!-- /book-container -->				
+			</div><!-- /grid -->
+		</div><!-- /container-main -->	
+
+		<script src="js/script.js"></script>	
+
+	</body>
+	</html>

@@ -1,0 +1,706 @@
+/* Background*/
+$background-color: #efefef;
+$background-cover: #e6f7ff;
+$background-likes: #b3e6ff;
+$background-content: #fff;
+$background-dropdown: #595959;
+$dropdown-hover: #797979;
+
+$background-likes-hover: #00aaff;
+
+
+
+/* Text */
+$quote-color: #777;
+$likes-color: #595959;
+$likes-hover: #fff;
+$dropdown-color: #ddd;
+$author-color: #aaa;
+
+
+body {	
+	font: 0.8em 'Roboto', sans-serif;
+	margin: 0;
+	padding: 0;		
+	font-size: 100%;
+	background-color: $background-color;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container-main {
+	width: 100%;
+	max-width: 1500px;
+	padding: 5px;	
+}
+
+#container-content {
+	width: 95%;						
+	margin: 0 auto;		
+}
+
+
+h1 {
+	font-size: 1.31em;
+	color: $background-dropdown;
+}
+
+h2 {
+	font-size: 0.875em;
+}
+
+.quote {
+	font-size: 0.75em;	
+	color: $quote-color;
+	overflow: hidden;	
+}
+
+.author {
+	font-size: 0.68em;
+	color: $author-color;
+}
+
+.grid {
+	.titles {
+		display: none;
+	}
+}
+
+.content {
+	background-color: $background-content;
+}
+.content h2 {
+	font-weight: bold;
+}
+
+.cover {
+	background-color: $background-cover;
+}
+
+.likes {	
+	color: $likes-color;
+	font-size: 0.75em;		
+}
+
+.menu {
+	position: relative;		
+	padding: 15px 0;
+}
+
+.toggle {
+	position: absolute;
+	right: 5px;
+	top: 30px;		
+}
+
+.content, .cover, .likes {
+		position: absolute;
+	}
+
+.material-icons.md-18 { font-size: 18px; }
+
+
+
+
+
+/* grid view */
+
+.grid {	
+
+	/* toggle icon */
+	.menu .material-icons:last-child {
+		display: none;		
+	}
+
+	.menu {		
+		margin: 0 auto;
+		width: 250px;
+	}	
+
+	#book-container {   
+      display: flex;    
+      flex-wrap: wrap;
+      justify-content: center;        
+    }  
+
+    /* single book */
+
+	.book-single {
+		width: 250px;
+		height: 250px;
+		position: relative;			
+		margin-bottom: 25px;		 
+		border: 1px solid lightgray;			
+	}	
+
+	.content {
+		left: 20%;
+		height: 220px;
+		padding: 10px;
+		padding-top: 0;
+
+	}
+
+	.cover {
+		top: 0;  
+		width: 20%;
+		height: 220px;
+		text-align: center;
+		padding-top: 10px;
+		overflow: hidden;
+	}
+
+	.likes {	
+		bottom: 0;
+		width: 100%;			
+		height: 15%;
+		background-color: $background-likes;		
+	}
+
+	.likes:hover {
+		color: $likes-hover;
+		background-color: $background-likes-hover;
+	}
+
+	.titles {
+		display: none;
+	}
+
+}	/* end of grid */
+
+
+
+/* for grid and view */
+// likes
+
+.likes {		
+	display: flex;
+	align-items: center;	
+}
+
+.likes i:first-child {
+	width: 10%;
+	padding-left: 10px;					
+	margin-right: 5px; 
+}
+
+.likes span {
+	width: 70%;		
+	padding-left: 10px;
+	margin-left: 5px;
+}
+
+/* dropdown button with icon */
+
+.dropdown-button {
+	width: 20%;		
+	height: 100%;		
+	display: flex;
+	align-items: center;
+	text-align: center;		
+}
+
+.likes i:last-child {		
+	width: 100%;		
+	height: 100%;			
+	margin-right: 0;
+	padding-left: 0;
+	padding-top: 6px;			
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+/* dropdown-menu  */
+
+.likes {
+	ul {
+		position: absolute;
+		width: 100%;			
+		top: 35px;		 		
+		bottom: 0;			
+		z-index: 1;		
+		display: none;				
+	}
+
+	ul li a, ul span {
+		display: block;
+		text-decoration: none;
+		padding: 10px;
+		background-color: $background-dropdown;
+		color: $dropdown-color;		
+		text-align: right;
+		font-size: 13px;	
+			
+	}
+
+	ul li:nth-child(4) a {		
+		padding-bottom: 0;
+	}
+
+	ul li:last-child a {
+		font-size: 9px;	
+		padding-top: 0;
+	}
+
+	ul li a:hover {
+		background-color: $dropdown-hover;
+	}
+}
+	
+
+/******* list view *******/
+
+.list { 
+	.menu .material-icons:first-child {
+		display: none;
+	}
+	
+	.book-single {
+		width: 100%;		
+		height: 50px;	
+		position: relative;				
+		border: 1px solid lightgray;		
+		display: flex;
+		align-items: center;	
+		border-bottom: none;
+		background-color: $background-cover;
+	}
+
+	.book-single:last-child {
+		border-bottom: 1px solid lightgray;
+	}
+	
+	.content, .content h2, .quote, .author, .cover, .likes {
+		position: relative;					
+		height: 100%;			
+	}
+
+
+	.content {
+		width: 80%;		
+		//width: 75%;		for full screen
+		display: flex;		
+		align-items: center;
+		overflow: hidden;	
+		background-color: $background-content;	
+	}
+
+	.content h2 {		
+		width: 100%;
+		display: flex;
+		align-items: center;
+		padding-left: 10px;		
+	}
+
+	.quote {
+		width: 50%;
+		display: none;		// flex for full screen			
+		padding: 8px 2px;	
+		text-overflow: ellipsis;
+		word-wrap: break-word;
+		height: 80%;						
+	}
+
+	.author {
+		width: 20%;		
+		padding-left: 5px;
+		padding-right: 10px;
+		display: none;		// flex for full screen	
+		align-items: center;	
+		justify-content: flex-end;
+		text-align: right;		
+	}	
+
+	.cover {
+		width: 5%;		
+		display: none;		// flex for full screen			
+		align-items: center;
+		justify-content: center;
+		transform: scale(0.7);	
+	}
+
+	// likes for small screen
+
+	.likes {						
+		width: 20%;		
+		display: flex;
+		align-items: center;			
+	}	
+
+	.likes i:first-child {
+		display: none;
+	}
+
+	.likes span {				
+		display: none;
+	}
+
+	.likes i:last-child {		
+		width: 100%;		
+		height: 100%;			
+		margin-right: 0;
+		padding-left: 0;
+		padding-top: 12px;		
+		display: flex;
+		justify-content: center;
+	}
+
+	// dropdown menu and ul
+
+	.dropdown-button {
+		width: 100%;							
+		height: 100%;		
+		display: flex;
+		align-items: flex-end;
+		text-align: center;	
+	}
+	
+	.likes ul {		
+		width: 300%;
+		top: 48px;					
+		right: 0;					
+	}
+
+
+	// titles
+
+	.titles {
+		width: 100%;
+		height: 30px;	
+		position: relative;				
+		display: flex;
+		align-items: flex-end;				
+		font-size: 12px;
+		padding-bottom: 8px;					
+	}
+
+	.titles {
+		.content-titles {
+			width: 95%;
+			//width: 75%;		full screen	
+			display: flex;
+			align-items: center;
+			overflow: hidden;	
+			color: $quote-color;			
+		}
+
+		.content-titles span:first-child {
+			width: 100%;
+			//width: 30%;	full screen
+			display: flex;
+			align-items: center;
+			padding-left: 10px;		
+		}
+
+		.content-titles  span:nth-child(2) {
+			width: 50%;
+			display: none;		// flex for full screen				
+			padding-left: 2px;				
+		}
+
+		.content-titles  span:nth-child(3)  {
+			width: 20%;		
+			padding-left: 5px;
+			padding-right: 10px;
+			display: none;		// flex for full screen				
+			align-items: center;	
+			justify-content: flex-end;
+			text-align: right;
+		}
+
+		.cover-titles {
+			width: 5%;		
+			display: none;		// flex for full screen				
+			align-items: center;
+			justify-content: center;	
+			color: $quote-color;		
+		}
+
+		.likes-titles {
+			width: 20%;		
+			color: $quote-color;	
+		}
+
+		.likes-titles span {
+			padding-left: 2px;
+		}
+	} 
+
+
+
+}	// end of list view
+
+
+
+@media screen and (min-width: 400px) {
+	.list {		
+		.likes {
+			width: 25%;
+			background-color: $background-content;
+		}
+
+		.likes i:first-child {
+			display: flex;
+		}	
+
+		.likes span {
+			display: flex;
+		}
+
+		.dropdown-button {
+			width: 30%;					
+		}
+
+		.likes i:last-child {		
+			width: 100%;		
+			height: 100%;			
+			margin-right: 0;
+			padding-left: 0;
+			padding-top: 12px;	
+			padding-right: 5px;		
+		}	
+
+		.content {
+			width: 65%;
+		}
+
+		.cover {
+			display: flex;
+			width: 10%;
+		}
+
+		.likes ul {		
+			width: 120%;
+		}
+
+		// titles
+		.titles {
+			.content-titles {
+				width: 65%;
+			}			
+			.cover-titles {
+				display: flex;
+				width: 10%;
+			}
+			.likes-titles {
+				width: 25%;
+			}
+			.likes-titles span {
+				padding-left: 10px;
+			}
+		}
+	}
+}
+
+
+
+/* one book */
+
+@media screen and (min-width: 500px){
+  .grid {
+    .menu {					
+		display: flex;
+		justify-content: flex-start; 				
+	}
+
+	.book-single {
+		margin: 15px;		
+	}
+
+	.book-single:first-child {
+		margin-top: 0;
+	}
+  }
+
+  .list {									
+	.likes ul {		
+		width: 70%;		// for full screen, done
+	  }	
+
+	.content {
+		width: 70%;
+	}
+
+	.content h2 {
+		width: 60%;
+	}
+
+	.content .author {
+		width: 40%;
+		display: flex;
+	}
+
+	.cover {
+		width: 10%;
+	}
+
+	.likes {
+		width: 20%;
+	}
+
+
+	  // titles
+	.titles {
+		.content-titles {
+			width: 70%;
+		}	
+
+	  	.cover-titles {
+	  		width: 10%;
+	  	}
+	  	.likes-titles {
+	  		width: 20%;
+	  	}
+
+		.content-titles span:first-child {
+			width: 60%;
+		}
+
+	  	.content-titles span:nth-child(3) {
+	  		width: 40%;
+	  		display: flex;
+	 	}
+		
+	}
+  }
+}
+
+/* two books */
+
+@media screen and (min-width: 617px) {			
+	.grid {		
+  		.menu {				
+			width: 530px;	
+		}
+	}
+
+	.list {		
+		.cover {
+			width: 5%;
+		}
+		
+		.content {
+			width: 75%;
+		}
+
+		.content h2 {
+			width: 30%;
+		}
+
+		.content .author {
+			width: 30%;			
+		}
+
+		.content .quote {
+			display: flex;
+			width: 40%;
+			padding-left: 10px;
+		}
+
+
+
+		// titles
+		.titles {
+			.content-titles {
+				width: 75%;
+			}	
+
+	  		.cover-titles {
+	  			width: 5%;
+	  		}
+	  	
+	  		// h1 
+			.content-titles span:first-child {
+				width: 30%;
+			}
+
+			// quote
+			.content-titles span:nth-child(2) {
+	  			width: 40%;
+	  			display: flex;
+	  			padding-left: 10px;
+	 		}
+
+			// author
+	  		.content-titles span:nth-child(3) {
+	  			width: 30%;	  		
+	 		}
+		
+		}
+
+	}
+
+}
+
+
+/* three books */
+
+@media screen and (min-width: 912px) {	
+	.grid {		
+  		.menu {				
+			width: 810px;	
+		}
+	}
+	.list {
+		.content .author {
+			width: 20%;			
+		}
+		.content .quote {			
+			width: 50%;			
+		}
+
+		// titles
+
+		.titles {
+			.content-titles {
+				width: 75%;
+			}	
+
+	  		.cover-titles {
+	  			width: 5%;
+	  		}
+		
+			.likes-titles {
+				width: 20%;
+			}	  	
+
+			// quote
+			.content-titles span:nth-child(2) {
+	  			width: 50%;
+	  			display: flex;	  		
+	 		}
+
+			// author
+	  		.content-titles span:nth-child(3) {
+	  			width: 20%;	  		
+	 		}
+		
+		}
+
+
+	}
+}
+
+
+/* four books */
+
+@media screen and (min-width: 1206px) {	
+	.grid {		
+  		.menu {				
+			width: 1090px;	
+		}
+	}
+}
+
+
+
+
+
+
